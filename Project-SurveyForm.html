@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to provide us with valuable feedback</p>
+    <form id="survey-form" method="post">
+      <fieldset>
+        <label class="one" id="name-label" for="name">Name: <input id="name" name="name" type="text" placeholder="Enter your name" required /></label>
+        <label class="one" id="email-label" for="email">Email: <input id="email" name="email" type="email" placeholder="Enter your email" required /></label>
+        <label class="one" id="number-label" for="number">Age (optional): <input id="number" name="number" type="number" min="18" max="120" placeholder="Enter your age" required /></label>
+        <label class="one" for="dropdown">Current Belt Level:
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">White</option>
+            <option value="2">Blue</option>
+            <option value="3">Purple</option>
+            <option value="4">Brown</option>
+            <option value="5">Black</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Competition Experience:</legend>
+          <div>
+            <label class="inline" for="No"><input value="No" id="No" type="radio" name="competition" class="inline" checked /> No</label>
+          </div>
+          <div>
+            <label class="inline" for="Yes"><input value="Yes" id="Yes" type="radio" name="competition" class="inline" /> Yes</label>
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>What would you like to see more of in class?</legend>
+          <div>
+            <input type="checkbox" id="escapes" value="escapes" name="training" class="inline"/> <label for="escapes" class="inline">Escapes</label>
+          </div>
+          <div>
+            <input type="checkbox" id="submissions" value="submissions" name="training"class="inline"/> <label for="submissions" class="inline">Submissions</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sweeps" value="sweeps" name="training"class="inline"/> <label for="sweeps" class="inline">Sweeps</label>
+          </div>
+          <div>
+            <input type="checkbox" id="leg-locks" value="leg-locks" name="training"class="inline"/> <label for="leg-locks" class="inline">Leg Locks</label>
+          </div>
+          <div>
+            <input type="checkbox" id="positional-sparring" value="positional-sparring" name="training"class="inline"/> <label for="positional-sparring" class="inline">Positional Sparring</label>
+          </div>
+      </fieldset>
+      <fieldset>
+        <label for="comments">Additional Comments:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I would like to learn more..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+  </html>
